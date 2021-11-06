@@ -4,7 +4,17 @@ import styled from "styled-components";
 //Animation
 import { motion } from "framer-motion";
 
-const Game = ({ name, released, image }) => {
+//Redux
+import { useDispatch } from "react-redux";
+import { loadDetail } from "../actions/detailActions";
+
+const Game = ({ name, released, image, id }) => {
+  // Load Details
+  const dispatch = useDispatch();
+  const loadDetailHandler = () => {
+    dispatch(loadDetail);
+  };
+
   return (
     <StyledGame>
       <h3>{name}</h3>
