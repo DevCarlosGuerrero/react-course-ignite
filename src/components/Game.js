@@ -1,22 +1,20 @@
-// Styling
+// Styling & Animation
 import styled from "styled-components";
-
-//Animation
 import { motion } from "framer-motion";
 
 //Redux
 import { useDispatch } from "react-redux";
-import { loadDetail } from "../actions/detailActions";
+import { loadDetail } from "../actions/detailAction";
 
 const Game = ({ name, released, image, id }) => {
-  // Load Details
+  // Load Detail Handler
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
-    dispatch(loadDetail);
+    dispatch(loadDetail(id));
   };
 
   return (
-    <StyledGame>
+    <StyledGame onClick={loadDetailHandler}>
       <h3>{name}</h3>
       <p>{released}</p>
       <img src={image} alt={name} />
@@ -33,6 +31,7 @@ const StyledGame = styled(motion.div)`
   text-align: center;
   border-radius: 1rem;
   overflow: hidden;
+  cursor: pointer;
 
   img {
     width: 100%;

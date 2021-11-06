@@ -9,6 +9,7 @@ import styled from "styled-components";
 
 // Components
 import Game from "../components/Game";
+import GameDetail from "../components/GameDetail";
 
 // Animations
 import { motion } from "framer-motion";
@@ -27,6 +28,7 @@ const Home = () => {
 
   return (
     <GameList>
+      <GameDetail />
       <h2>Upcoming Games</h2>
       <Games>
         {upcomingGames &&

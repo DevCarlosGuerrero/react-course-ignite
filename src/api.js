@@ -42,8 +42,8 @@ export const newGamesURL = () => `${base_url}${newGames}`;
 
 // Game details
 export const gameDetailsURL = (game_id) =>
-  `${base_url}games/${game_id}?key=${process.env.REACT_APP_RAWG_API};`;
+  `${base_url}games/${game_id}?key=${process.env.REACT_APP_RAWG_API}`;
 
 // Game Screenshots
 export const gameScreenshotsURL = (game_id) =>
-  `${base_url}games/${game_id}/screenshots?key=${process.env.REACT_APP_RAWG_API};`;
+  `${base_url}games/${game_id}/screenshots?key=${process.env.REACT_APP_RAWG_API}`;
